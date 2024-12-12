@@ -3,6 +3,10 @@ using namespace std;
 
 int main() {
 
+cout << "---------------------------------------------------" << endl;
+cout << "Q-1" << endl;
+
+
     int n;
 
     cout << "Enter array size: ";
@@ -23,30 +27,26 @@ int main() {
 
 
 
+cout << "---------------------------------------------------" << endl;
+cout << "Q-2" << endl;
 
 
-    int o;
-
-    cout << "Enter array size: ";
-    cin >> o;
-
-    int a[o];
-
-    cout << "Enter array elements:\n";
-    for (int i=0; i<o; i++) 
+int size;
+    cout << "Enter array size:- ";
+    cin >> size;
+    int arr[size];  
+    cout << "Enter array elements: \n";
+    for (int i=0; i<size; i++) 
     {
         cout << "a[" << i << "] = ";
-        cin >> a[i];
+        cin >> arr[i];
     }
-
-    int sum = 0;
-    for (int i=0; i<o; i++) 
+    double sum=0;
+    for (int i=0; i<size; i++) 
     {
-        sum += a[i];
-    }
-
-    double average = (double)sum / o;
-
+        sum += arr[i];
+    } 
+    double average=sum/size;
     cout << "Average of an Array: " << average << endl;
 
 
@@ -54,42 +54,43 @@ int main() {
 
 
 
+cout << "---------------------------------------------------" << endl;
+cout << "Q-3" << endl;
 
-    int l;
-
-    cout << "Enter array size: ";
-    cin >> l;
-
-    int a[l], b[l], c[l];
-
-    cout << "Enter array A's elements:\n";
-    for (int i=0; i<l; i++)
-     {
-        cout << "a[" << i << "] = ";
-        cin >> a[i];
-    }
-
-    cout << "Enter array B's elements:\n";
-    for (int i=0; i<l; i++)
-     {
-        cout << "b[" << i << "] = ";
-        cin >> b[i];
-    }
-
-    for (int i=0; i<l; i++) 
+    int sizes;
+    cout << "Enter array size:- ";
+    cin >> sizes;
+    int A[sizes], B[sizes], C[sizes]; 
+    cout << "Enter array A's elements: \n";
+    for (int i=0; i<sizes; i++) 
     {
-        c[i] = a[i] + b[i];
+        cout << "a[" << i << "] = ";
+        cin >> A[i];
     }
-
-    cout << "Array C is: ";
-    for (int i=0; i<l; i++)
-     {
-        cout << c[i] << ", ";
+    cout << "Enter array B's elements:\n";
+    for (int i=0; i<sizes; i++) 
+    {
+        cout << "b[" << i << "] = ";
+        cin >> B[i];
     }
-    cout << endl;
+    for (int i=0; i<sizes; i++) 
+    {
+        C[i] = A[i] + B[i];
+    }
+    cout << "Array C is:- ";
+    for (int i=0; i<sizes; i++) 
+    {
+        cout << C[i];
+        if (i!=sizes- 1) 
+        {
+            cout << ", "; 
 
-
-
-
-
+        }
+    }
+   cout<<endl;
 }
+
+
+
+
+
