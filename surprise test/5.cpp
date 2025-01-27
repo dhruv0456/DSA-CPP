@@ -1,23 +1,27 @@
-#include <iostream>
-#include <vector>
 
-void findMinMax(const std::vector<int>& arr, int& min, int& max) {
-    min = arr[0];
+#include<iostream>
+using namespace std;
+int main ()
+{
+    int arr[10], n, i, max, min;
+    cout << "Enter the size of the array : ";
+    cin >> n;
+    cout << "Enter the elements of the array : ";
+    for (i = 0; i < n; i++)
+        cin >> arr[i];
     max = arr[0];
-    for (int num : arr) {
-        if (num < min) min = num;
-        if (num > max) max = num;
+    for (i = 0; i < n; i++)
+    {
+        if (max < arr[i])
+            max = arr[i];
     }
-}
-
-int main() {
-    std::vector<int> arr = {5, 1, 9, 4, 7};
-
-    int min, max;
-
-    findMinMax(arr, min, max);
-
-    std::cout << "Smallest: " << min << ", Largest: " << max << std::endl;
-    
+    min = arr[0];
+    for (i = 0; i < n; i++)
+    {
+        if (min > arr[i])
+            min = arr[i];
+    }
+    cout << "Largest element : " << max << endl;
+    cout << "Smallest element : " << min;
     return 0;
 }

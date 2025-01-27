@@ -1,22 +1,29 @@
+
 #include <iostream>
+using namespace std;
 
-bool isPalindrome(int num) {
-    int original = num, reversed = 0;
-    while (num > 0) {
-        int digit = num % 10;
-        reversed = reversed * 10 + digit;
-        num /= 10;
-    }
-    return original == reversed;
-}
+int main()
+{
+     int n, num, digit, rev = 0;
 
-int main() {
-    int num;
-    std::cout << "Enter a number: ";
-    std::cin >> num;
-    if (isPalindrome(num))
-        std::cout << num << " is a palindrome." << std::endl;
-    else
-        std::cout << num << " is not a palindrome." << std::endl;
+     cout << "Enter a positive number: ";
+     cin >> num;
+
+     n = num;
+
+     do
+     {
+         digit = num % 10;
+         rev = (rev * 10) + digit;
+         num = num / 10;
+     } while (num != 0);
+
+     cout << " The reverse of the number is: " << rev << endl;
+
+     if (n == rev and n > 0)  // Negative numbers are not palindromic
+         cout << " The number is a palindrome.";
+     else
+         cout << " The number is not a palindrome.";
+
     return 0;
 }

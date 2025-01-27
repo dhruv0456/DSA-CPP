@@ -1,10 +1,16 @@
+
 #include <iostream>
+using namespace std;
 
 int main() {
-    int num = 42;
-    int* ptr = &num;
+    int *ptr = new int; 
+  cout << "Enter a value: ";
+  cin >> *ptr; 
+  cout << "Value of variable: " << *ptr << endl;
+  cout << "Address of variable: " << ptr << endl;
 
-    std::cout << "Value of variable: " << *ptr << std::endl;
-    std::cout << "Address of variable: " << ptr << std::endl;
+    delete ptr; 
+    ptr = nullptr;
+
     return 0;
 }

@@ -1,15 +1,22 @@
-#include <iostream>
 
-int factorial(int n) {
-    if (n < 0) return -1; // Negative numbers don't have factorial
-    if (n == 0 || n == 1) return 1;
-    return n * factorial(n - 1);
-}
+#include <iostream>
+using namespace std;
 
 int main() {
-    int num;
-    std::cout << "Enter a number: ";
-    std::cin >> num;
-    std::cout << "Factorial of " << num << " is " << factorial(num) << std::endl;
+    int n;
+    long factorial = 1.0;
+
+    cout << "Enter a positive integer: ";
+    cin >> n;
+
+    if (n < 0)
+        cout << "Error! Factorial of a negative number doesn't exist.";
+    else {
+        for(int i = 1; i <= n; ++i) {
+            factorial *= i;
+        }
+        cout << "Factorial of " << n << " = " << factorial;    
+    }
+
     return 0;
 }

@@ -1,18 +1,33 @@
+
 #include <iostream>
 #include <vector>
+using namespace std;
 
-void reverseArray(std::vector<int>& arr) {
+void reverseArray(vector<int>& arr) {
     int n = arr.size();
     for (int i = 0; i < n / 2; ++i) {
-        std::swap(arr[i], arr[n - i - 1]);
+        swap(arr[i], arr[n - i - 1]);
     }
 }
 
 int main() {
-    std::vector<int> arr = {1, 2, 3, 4, 5};
+    int size;
+    cout << "Enter the size of the array: ";
+    cin >> size;
+
+    vector<int> arr(size); 
+    cout << "Enter " << size << " elements: ";
+    for (int i = 0; i < size; ++i) {
+        cin >> arr[i]; 
+    }
+
     reverseArray(arr);
-    std::cout << "Reversed array: ";
-    for (int num : arr) std::cout << num << " ";
-    std::cout << std::endl;
+
+    cout << "Reversed array: ";
+    for (int num : arr) {
+        cout << num << " ";
+    }
+    cout << endl;
+
     return 0;
 }
