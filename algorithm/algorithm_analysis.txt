@@ -1,4 +1,4 @@
-1) int sum (int a , int b)
+1 int sum (int a , int b)
 {
         int result = a + b;
         return result;
@@ -6,7 +6,7 @@
 
 Answer :-> Big O(1)
 
-2) void printArray(int arr[], int n)
+2 void printArray(int arr[], int n)
 {
         for (int i=0; i<n; i++)
         {
@@ -16,7 +16,7 @@ Answer :-> Big O(1)
 }
 Answer :-> Big O(log n)
 
-3) void generateMatrix(int n)
+3 void generateMatrix(int n)
 {
         int matrix[n][n]; // 2D array
         for (int i=0; i<n; i++)
@@ -29,7 +29,7 @@ Answer :-> Big O(log n)
 }
 Answer :-> Big O (n^2)
 
-4) void swapNumbers (int &a, int &b)
+4 void swapNumbers (int &a, int &b)
 {
         a=a+b;
         b=a-b;
@@ -37,7 +37,7 @@ Answer :-> Big O (n^2)
 }
 Answer :-> Big O(1)
 
-5) int findMax (int arr[], int n)
+5 int findMax (int arr[], int n)
 {
         int maxVal=arr[0];
         for (int i=1; i<n; i++)
